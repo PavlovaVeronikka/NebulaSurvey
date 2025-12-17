@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "description": "NebulaSurvey – Base-first OnchainKit wallet UX + Viem JSON-RPC reads.",
+  "description": "NebulaSurvey – TypeScript/Vite project built with selected Coinbase SDKs.",
   "scripts": {
     "dev": "vite",
     "build": "tsc -p tsconfig.json && vite build",
@@ -11,16 +11,36 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@coinbase/onchainkit": "^0.19.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "viem": "^2.21.0"
+    "@coinbase/onchainkit": "^1.1.0",
+    "@coinbase/smart-wallet": "^0.6.0",
+    "@coinbase/x402": "^2.0.0",
+    "@coinbase/cdp-sdk": "^1.1.1",
+    "@coinbase/agentkit": "^0.6.0"
   },
   "devDependencies": {
-    "@types/react": "^18.2.40",
-    "@types/react-dom": "^18.2.15",
-    "@vitejs/plugin-react": "^4.2.0",
     "typescript": "^5.3.3",
     "vite": "^5.0.8"
+  },
+  "dependencyDescriptions": {
+    "@coinbase/onchainkit": {
+      "repo": "coinbase/onchainkit",
+      "why": "UI helpers and Base-first components for onchain-enabled apps."
+    },
+    "@coinbase/smart-wallet": {
+      "repo": "coinbase/smart-wallet",
+      "why": "Account abstraction and smart wallet flows."
+    },
+    "@coinbase/x402": {
+      "repo": "coinbase/x402",
+      "why": "HTTP-native x402 payment and paywalled API support."
+    },
+    "@coinbase/cdp-sdk": {
+      "repo": "coinbase/cdp-sdk",
+      "why": "Access to Coinbase Developer Platform services."
+    },
+    "@coinbase/agentkit": {
+      "repo": "coinbase/agentkit",
+      "why": "Agent-based and automated onchain interaction toolkit."
+    }
   }
 }
